@@ -24,39 +24,47 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error loading streamers:', error);
+            if (counterElement) counterElement.textContent = '!';
         });
     
     // Show streamers button click handler
-    showStreamersBtn.addEventListener('click', function(e) {
-        console.log('[DEBUG] show-streamers-btn clicked, hiding button and showing cards');
-        // Hide the button when cards are displayed
-        showStreamersBtn.style.display = 'none';
-        container.classList.remove('hidden');
-        filterContainer.classList.remove('hidden');
-        renderStreamers(getFilteredStreamers());
-        
-        // Enable scrolling after button click
-        document.body.style.overflow = 'auto';
-        
-        // Scroll to show the content
-        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
-    });
+    if (showStreamersBtn) {
+        showStreamersBtn.addEventListener('click', function(e) {
+            // Hide the button when cards are displayed
+            showStreamersBtn.style.display = 'none';
+            if (container) container.classList.remove('hidden');
+            if (filterContainer) filterContainer.classList.remove('hidden');
+            renderStreamers(getFilteredStreamers());
+            
+            // Enable scrolling after button click
+            document.body.style.overflow = 'auto';
+            
+            // Scroll to show the content
+            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+        });
+    }
     
     // Filter button handlers
-    filterAllBtn.addEventListener('click', function() {
-        setActiveFilter('all');
-        renderStreamers(getFilteredStreamers());
-    });
+    if (filterAllBtn) {
+        filterAllBtn.addEventListener('click', function() {
+            setActiveFilter('all');
+            renderStreamers(getFilteredStreamers());
+        });
+    }
     
-    filterProBtn.addEventListener('click', function() {
-        setActiveFilter('pro');
-        renderStreamers(getFilteredStreamers());
-    });
+    if (filterProBtn) {
+        filterProBtn.addEventListener('click', function() {
+            setActiveFilter('pro');
+            renderStreamers(getFilteredStreamers());
+        });
+    }
     
-    filterStreamersBtn.addEventListener('click', function() {
-        setActiveFilter('streamers');
-        renderStreamers(getFilteredStreamers());
-    });
+    if (filterStreamersBtn) {
+        filterStreamersBtn.addEventListener('click', function() {
+            setActiveFilter('streamers');
+            renderStreamers(getFilteredStreamers());
+        });
+    }
     
     function setActiveFilter(filter) {
         currentFilter = filter;
@@ -102,13 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderStreamers(streamers) {
         container.innerHTML = '';
         
-        streamers.forEach((streamer, index) => {
+        streamers.forEach((streamer) => {
             const card = createStreamerCard(streamer);
             container.appendChild(card);
         });
     }
     
     function createStreamerCard(streamer) {
+        if (!streamer) {
+            console.error('Invalid streamer data');
+            return document.createElement('article');
+        }
+        
         const card = document.createElement('article');
         card.className = 'streamer-card';
         
@@ -151,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
             `;
         }
-        if (streamer.links && streamer.links.youtube) {
+        if (streamer.links && streamer.links.youtube && streamer.links.youtube.trim() !== '') {
             linksHtml += `
                 <a href="${escapeHtml(streamer.links.youtube)}" 
                    class="youtube" 
@@ -174,12 +187,5 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         return card;
-    }
-    
-    function escapeHtml(text) {
-        if (!text) return '';
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
     }
 });

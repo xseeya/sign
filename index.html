@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
                 </svg>
             </a>
         </div>
-        <a href="tournaments" class="tournaments-button" onclick="exitToMain(event)">
+        <a href="tournaments" class="tournaments-button" onclick="exitToMain(event, 'tournaments'); return false;">
             My achievements
         </a>
     </header>
@@ -68,19 +68,7 @@
         
     </main>
     
+    <script src="utils.js"></script>
     <script src="app.js"></script>
-    <script>
-        // Function to animate page exit before redirecting to tournaments page
-        function exitToMain(event) {
-            event.preventDefault();
-            const body = document.body;
-            body.classList.add('page-exiting');
-            
-            // Wait for animation to complete, then redirect
-            setTimeout(function() {
-                window.location.href = 'tournaments';
-            }, 400);
-        }
-    </script>
 </body>
 </html>

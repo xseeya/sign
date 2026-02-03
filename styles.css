@@ -1,12 +1,8 @@
+/* Base Reset & Custom Scrollbar Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Custom Scrollbar Styling */
-/* Firefox */
-* {
     scrollbar-width: thin;
     scrollbar-color: #58a6ff #161b22;
 }
