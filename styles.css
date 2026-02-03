@@ -396,18 +396,6 @@ body {
     pointer-events: none;
 }
 
-/* Card entrance animation */
-@keyframes cardEntrance {
-    0% {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
 /* Streamers grid - 4 cards per row */
 .streamers-grid {
     display: grid;
@@ -416,7 +404,7 @@ body {
 }
 
 .streamers-grid:not(.hidden) {
-    animation: revealContainer 0.4s ease-out forwards;
+    /* Cards appear instantly without animation */
 }
 
 @keyframes revealContainer {

@@ -104,8 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         streamers.forEach((streamer, index) => {
             const card = createStreamerCard(streamer);
-            card.style.animationDelay = `${index * 0.08}s`;
-            card.style.animation = `cardEntrance 0.5s ease-out ${index * 0.08}s forwards`;
             container.appendChild(card);
         });
     }
