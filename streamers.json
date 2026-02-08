@@ -581,5 +581,14 @@
       "hltv": "https://www.hltv.org/player/7808/freakazoid",
       "liquipedia": "https://liquipedia.net/counterstrike/Freakazoid"
     }
+  },
+  {
+    "nickname": "MAGILA",
+    "name": "Matas Magila",
+    "links": {
+      "twitch": "https://www.twitch.tv/magilacs",
+      "hltv": "https://www.hltv.org/player/22191/magila",
+      "liquipedia": "https://liquipedia.net/counterstrike/MAGILA"
+    }
   }
 ]
