@@ -230,9 +230,28 @@ document.addEventListener('DOMContentLoaded', function() {
             nicknameEl.style.cursor = 'pointer';
             nicknameEl.addEventListener('click', function(e) {
                 e.preventDefault();
-                // Show name in alert or tooltip
+                // Toggle tooltip visibility on mobile
                 if (isMobile()) {
-                    alert(streamer.name);
+                    const tooltip = nicknameEl.querySelector('.tooltip');
+                    if (tooltip) {
+                        // Hide all other tooltips first
+                        document.querySelectorAll('.streamer-card .tooltip.visible').forEach(t => {
+                            if (t !== tooltip) {
+                                t.classList.remove('visible');
+                            }
+                        });
+                        tooltip.classList.toggle('visible');
+                    }
+                }
+            });
+            
+            // Close tooltip when clicking outside
+            document.addEventListener('click', function(e) {
+                if (isMobile() && !nicknameEl.contains(e.target)) {
+                    const tooltip = nicknameEl.querySelector('.tooltip');
+                    if (tooltip) {
+                        tooltip.classList.remove('visible');
+                    }
                 }
             });
         }

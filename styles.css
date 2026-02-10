@@ -687,7 +687,8 @@ body {
     border-top-color: #161b22;
 }
 
-.streamer-header .nickname:hover .tooltip {
+.streamer-header .nickname:hover .tooltip,
+.streamer-header .nickname .tooltip.visible {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
@@ -904,6 +905,15 @@ body {
         font-size: 1rem;
         z-index: 1000;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .streamer-card .tooltip.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
     }
     
     .streamer-card .tooltip::after {
