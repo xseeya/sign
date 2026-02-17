@@ -617,5 +617,14 @@
       "hltv": "https://www.hltv.org/player/22065/angelka",
       "liquipedia": "https://liquipedia.net/counterstrike/Angelka"
     }
+  },
+  {
+    "nickname": "roman",
+    "name": "Ricardo Oliveira",
+    "links": {
+      "twitch": "https://www.twitch.tv/rmncs",
+      "hltv": "https://www.hltv.org/player/2241/roman",
+      "liquipedia": "https://liquipedia.net/counterstrike/Rmn"
+    }
   }
 ]
