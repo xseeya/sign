@@ -626,5 +626,41 @@
       "hltv": "https://www.hltv.org/player/2241/roman",
       "liquipedia": "https://liquipedia.net/counterstrike/Rmn"
     }
+  },
+  {
+    "nickname": "PROPERNATOR",
+    "name": "",
+    "links": {
+      "twitch": "https://www.twitch.tv/propernator",
+      "hltv": "",
+      "liquipedia": ""
+    }
+  },
+  {
+    "nickname": "sawlties",
+    "name": "Serena",
+    "links": {
+      "twitch": "https://www.twitch.tv/sawlties",
+      "hltv": "",
+      "liquipedia": ""
+    }
+  },
+  {
+    "nickname": "joshua",
+    "name": "",
+    "links": {
+      "twitch": "https://www.twitch.tv/joshua_official",
+      "hltv": "",
+      "liquipedia": ""
+    }
+  },
+  {
+    "nickname": "sl3nd",
+    "name": "Henrich Hevesi",
+    "links": {
+      "twitch": "https://www.twitch.tv/sl3ndd",
+      "hltv": "https://www.hltv.org/player/20870/sl3nd",
+      "liquipedia": "https://liquipedia.net/counterstrike/Sl3nd"
+    }
   }
 ]
