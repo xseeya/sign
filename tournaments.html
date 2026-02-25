@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tournaments - ayoshee</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header class="header">
@@ -39,141 +39,7 @@
         </div>
     </main>
     
-    <script src="utils.js"></script>
-    <script src="app.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('tournaments-container');
-            const counterElement = document.getElementById('tournament-counter');
-            let tournamentsData = [];
-            
-            // Fetch tournament data
-            fetch('tournaments.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to load tournaments data');
-                    }
-                    return response.json();
-                })
-                .then(tournaments => {
-                    tournamentsData = tournaments;
-                    animateCounter(tournaments.length, counterElement);
-                    renderTournaments(tournaments);
-                    
-                    // Enable scrolling immediately on this page
-                    document.body.style.overflow = 'auto';
-                })
-                .catch(error => {
-                    console.error('Error loading tournaments:', error);
-                    container.innerHTML = '<div class="error">Failed to load tournaments data</div>';
-                });
-            
-            function renderTournaments(tournaments) {
-                container.innerHTML = '';
-                
-                tournaments.forEach((tournament) => {
-                    const card = createTournamentCard(tournament);
-                    container.appendChild(card);
-                });
-            }
-            
-            function createTournamentCard(tournament) {
-                const card = document.createElement('article');
-                card.className = 'tournament-card';
-                
-                // Generate links HTML
-                let linksHtml = '';
-                if (tournament.links) {
-                    if (tournament.links.info) {
-                        linksHtml += `
-                            <a href="${escapeHtml(tournament.links.info)}" 
-                               class="tournament-link info" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                Info
-                            </a>
-                        `;
-                    }
-                    if (tournament.links.website) {
-                        linksHtml += `
-                            <a href="${escapeHtml(tournament.links.website)}" 
-                               class="tournament-link website" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                Website
-                            </a>
-                        `;
-                    }
-                    if (tournament.links.bracket) {
-                        linksHtml += `
-                            <a href="${escapeHtml(tournament.links.bracket)}" 
-                               class="tournament-link bracket" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                Bracket
-                            </a>
-                        `;
-                    }
-                }
-                
-                // Format date
-                const date = new Date(tournament.date);
-                const formattedDate = date.toLocaleDateString('ru-RU', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric'
-                });
-                
-                // Get placement badge class
-                let placementClass = 'placement-regular';
-                if (tournament.placement.toLowerCase().includes('winner')) {
-                    placementClass = 'placement-winner';
-                } else if (tournament.placement.toLowerCase().includes('2') || tournament.placement.toLowerCase().includes('second')) {
-                    placementClass = 'placement-second';
-                } else if (tournament.placement.toLowerCase().includes('3') || tournament.placement.toLowerCase().includes('third')) {
-                    placementClass = 'placement-third';
-                }
-                
-                // Generate teammates HTML
-                let teammatesHtml = '';
-                if (tournament.teammates && tournament.teammates.length > 0) {
-                    const teammateBadges = tournament.teammates.map(t => 
-                        `<span class="teammate-badge">${escapeHtml(t)}</span>`
-                    ).join('');
-                    teammatesHtml = `<div class="tournament-teammates"><span class="teammates-label">With:</span><div class="teammates-list">${teammateBadges}</div></div>`;
-                }
-                
-                card.innerHTML = `
-                    <div class="tournament-header">
-                        <div class="tournament-game">${escapeHtml(tournament.game)}</div>
-                        <div class="tournament-date">${formattedDate}</div>
-                    </div>
-                    <h2 class="tournament-name">${escapeHtml(tournament.name)}</h2>
-                    <div class="tournament-team">Team: ${escapeHtml(tournament.team)}</div>
-                    <div class="tournament-placement ${placementClass}">
-                        <span class="placement-label">Result:</span>
-                        <span class="placement-value">${escapeHtml(tournament.placement)}</span>
-                    </div>
-                    ${teammatesHtml}
-                    <div class="tournament-links">
-                        ${linksHtml}
-                    </div>
-                `;
-                
-                return card;
-            }
-            
-            // Scroll down button functionality
-            const scrollDownBtn = document.getElementById('scroll-down-btn');
-            if (scrollDownBtn) {
-                scrollDownBtn.addEventListener('click', function() {
-                    window.scrollTo({ 
-                        top: window.innerHeight, 
-                        behavior: 'smooth' 
-                    });
-                });
-            }
-        });
-    </script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
