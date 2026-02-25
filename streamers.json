@@ -680,7 +680,8 @@
       "hltv": "https://www.hltv.org/player/22143/p3kko",
       "liquipedia": "https://liquipedia.net/counterstrike/P3kko"
     },
-  {
+  },
+   {
     "nickname": "tory",
     "name": "Victoria Kazieva",
     "links": {
@@ -688,5 +689,6 @@
       "hltv": "https://www.hltv.org/player/16497/tory",
       "liquipedia": "https://liquipedia.net/counterstrike/Tory"
     }
-  }, 
+   }
+
 ]
