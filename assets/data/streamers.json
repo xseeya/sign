@@ -689,6 +689,42 @@
       "hltv": "https://www.hltv.org/player/16497/tory",
       "liquipedia": "https://liquipedia.net/counterstrike/Tory"
     }
-   }
+   },
+   {
+    "nickname": "snatchie",
+    "name": "Michał Rudzki",
+    "links": {
+      "twitch": "https://www.twitch.tv/snatchieeee",
+      "hltv": "https://www.hltv.org/player/9574/snatchie",
+      "liquipedia": "https://liquipedia.net/counterstrike/Snatchie"
+    }
+   },
+   {
+    "nickname": "Joanass",
+    "name": "Joana Silva",
+    "links": {
+      "twitch": "https://www.twitch.tv/joanass/",
+      "hltv": "https://www.hltv.org/player/24793/joanass",
+      "liquipedia": ""
+    }
+   },
+   {
+    "nickname": "Qiyarah",
+    "name": "Kiara Janssen",
+    "links": {
+      "twitch": "https://www.twitch.tv/Qiyarah",
+      "hltv": "https://www.hltv.org/player/21796/qiyarah",
+      "liquipedia": "https://liquipedia.net/counterstrike/Qiyarah"
+    }
+   },
+   {
+    "nickname": "Alkaren",
+    "name": "Alimzhan Bitimbay",
+    "links": {
+      "twitch": "https://www.twitch.tv/alkarenn",
+      "hltv": "https://www.hltv.org/player/23600/alkaren",
+      "liquipedia": "https://liquipedia.net/counterstrike/Alkaren"
+    }
+   },
 
 ]
