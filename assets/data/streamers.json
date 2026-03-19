@@ -726,5 +726,123 @@
       "liquipedia": "https://liquipedia.net/counterstrike/Alkaren"
     }
    },
-
+   {
+    "nickname": "Epidemic",
+    "name": "",
+    "links": {
+      "twitch": "https://www.twitch.tv/Epidemic",
+      "hltv": "",
+      "liquipedia": ""
+    }
+   },
+   {
+    "nickname": "pr",
+    "name": "Paulo Silva",
+    "links": {
+      "twitch": "https://www.twitch.tv/prcs",
+      "hltv": "https://www.hltv.org/player/15885/pr",
+      "liquipedia": "https://liquipedia.net/pokemon/Paulo_Silva"
+    }
+   },
+   {
+    "nickname": "Nayomy",
+    "name": "Naomi Janssen",
+    "links": {
+      "twitch": "https://www.twitch.tv/Nayomy_cs",
+      "hltv": "https://www.hltv.org/player/21798/nayomy",
+      "liquipedia": "https://liquipedia.net/counterstrike/Nayomy"
+    }
+   },
+   {
+    "nickname": "MartinezSa",
+    "name": "Antonio Martinez",
+    "links": {
+      "twitch": "https://www.twitch.tv/martiinezsa",
+      "hltv": "https://www.hltv.org/player/21239/martinezsa",
+      "liquipedia": "https://liquipedia.net/counterstrike/Martinez"
+    }
+   },
+   {
+    "nickname": "Patsi",
+    "name": "Robert Isyanov",
+    "links": {
+      "twitch": "https://www.twitch.tv/patsiii",
+      "hltv": "https://www.hltv.org/player/19673/patsi",
+      "liquipedia": "https://liquipedia.net/counterstrike/Patsi"
+    }
+   },
+   {
+    "nickname": "sh1pz",
+    "name": "",
+    "links": {
+      "twitch": "",
+      "hltv": "",
+      "liquipedia": ""
+    }
+   },
+   {
+    "nickname": "hyp3rrrr",
+    "name": "",
+    "links": {
+      "twitch": "",
+      "hltv": "",
+      "liquipedia": ""
+    }
+   },
+   {
+    "nickname": "estrella",
+    "name": "",
+    "links": {
+      "twitch": "",
+      "hltv": "",
+      "liquipedia": ""
+    }
+   },
+   {
+    "nickname": "pr1metapz",
+    "name": "Luca Voigt",
+    "links": {
+      "twitch": "https://www.twitch.tv/pr1metapz",
+      "hltv": "https://www.hltv.org/player/21139/pr1metapz",
+      "liquipedia": "https://liquipedia.net/counterstrike/Pr1metapz"
+    }
+   },
+   {
+    "nickname": "Ant1ka",
+    "name": "Anna Ananikova",
+    "links": {
+      "twitch": "https://www.twitch.tv/ant1ka",
+      "hltv": "https://www.hltv.org/player/10283/ant1ka",
+      "liquipedia": "https://liquipedia.net/counterstrike/Ant1ka"
+    }
+   },
+   {
+    "nickname": "clax",
+    "name": "Timur Sabirov",
+    "links": {
+      "twitch": "",
+      "hltv": "https://www.hltv.org/player/12004/clax",
+      "liquipedia": "https://liquipedia.net/counterstrike/Clax"
+    }
+   },
+   {
+    "nickname": "R4DYX",
+    "name": "Selman Ozan",
+    "links": {
+      "twitch": "",
+      "hltv": "https://www.hltv.org/player/25110/r4dyx",
+      "liquipedia": "https://liquipedia.net/counterstrike/R4DYX"
+    }
+   },
+   {
+    "nickname": "Goofy",
+    "nickname": "Krzysztof Górski",
+    "name": "",
+    "links": {
+      "twitch": "https://www.twitch.tv/goofiacz",
+      "hltv": "https://www.hltv.org/player/15428/goofy",
+      "liquipedia": "https://liquipedia.net/counterstrike/Goofy"
+    }
+   },
+  
 ]
