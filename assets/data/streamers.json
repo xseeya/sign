@@ -836,13 +836,12 @@
    },
    {
     "nickname": "Goofy",
-    "nickname": "Krzysztof Górski",
-    "name": "",
+    "name": "Krzysztof Górski",
     "links": {
       "twitch": "https://www.twitch.tv/goofiacz",
       "hltv": "https://www.hltv.org/player/15428/goofy",
       "liquipedia": "https://liquipedia.net/counterstrike/Goofy"
     }
-   },
+   }
   
 ]
